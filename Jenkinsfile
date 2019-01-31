@@ -25,8 +25,8 @@ metadata:
     description: mysql-pod
 spec:
   containers:
-  #DB-client
-  - name: mysql
+  #mysql-client
+  - name: mysql-client
     image: mysql:5.7
     resources:
       limits:
@@ -34,7 +34,7 @@ spec:
     command:
     - cat
     tty: true
-  #DB-server
+  #mysql-server
   - name: mysql-server
     image: registry.access.redhat.com/rhscl/mariadb-102-rhel7:1
     resources:
@@ -71,12 +71,12 @@ spec:
 
     stage('mysql-client') {
       steps {
-        container('mysql') {
+        container('mysql-client') {
           sh 'hostname'
           sh 'pwd'
           sh 'ls -alh'
           sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP -e "show databases;"'
-          sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP testDB -e "SELECT * FROM users.table;"'
+          sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP testDB -e "SELECT * FROM users;"'
         }
     }
 
