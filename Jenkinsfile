@@ -62,8 +62,9 @@ spec:
      steps {
       container('mysql-server') {
             sh 'hostname'
+            sh 'pwd'
+            sh 'ls -alh'
             sh 'scripts/setup.sh'
-            //sh 'while ! mysqladmin ping --user=$databaseUsername --password=$databasePassword -h$databaseHost --port=$databasePort --silent; do sleep 1; done'
         }
       }
     }
@@ -75,7 +76,7 @@ spec:
           sh 'pwd'
           sh 'ls -alh'
           sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP -e "show databases;"'
-          sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP -e "SELECT * FROM testDB.table;" '
+          sh 'mysql --user=test --password=test --host=127.0.0.1 --port=3306 --protocol=TCP testDB -e "SELECT * FROM users.table;"'
         }
     }
 
