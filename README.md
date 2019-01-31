@@ -12,6 +12,10 @@ An example declaritive jenkins pipeline script that launches a kubernetes pod in
 - Creates a database called "testDB" in the "mysql-server" container, creates a table called "users" and loads some test data into the table.
 - From the "mysql-client" container, connect to the "mysql-server"container over TCP and run a SQL QUERY of `SELECT * FROM users`.
 
+## results
+![alt text](images/results.png "jenkins pipeline results")
+
+
 ## requirements
 ### openshift/OKD
 > I used [minishift](https://github.com/minishift/minishift) for this, and also ran a persistent Jenkins master server within minishift. Used RedHat's template which already has the kubernetes, openshift, etc. plugins installed and configured.
