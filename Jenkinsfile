@@ -9,6 +9,9 @@
 // def databasePort = '3306'
 
 pipeline {
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+  }  
   agent {
     kubernetes {
       cloud 'openshift'
