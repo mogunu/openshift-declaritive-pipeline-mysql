@@ -2,9 +2,9 @@
 
 ## what is this?
 An example declaritive jenkins pipeline script that launches a kubernetes pod in OpenShift, with 3 containers:
-- mysql-client
-- mysql-server
-- jnlp
+- "mysql-client" = mysql:5.7
+- "mysql-server" = mariadb-102-rhel7:1
+- jenkins/jnlp-slave:alpine (added to pod automatically)
 
 ## what does the pipeline do?
 - Creates a database called "testDB" in the "mysql-server" container, creates a table called "users" and loads some test data into the table.
@@ -13,8 +13,7 @@ An example declaritive jenkins pipeline script that launches a kubernetes pod in
 ## results
 ![alt text](images/results.png "jenkins pipeline results")
 
-## requirements
-- [requirements.md](requirements.md)
-
-## resources
-- [resources.md](resources.md)
+## docs
+- [requirements](docs/requirements.md)
+- [resources](docs/resources.md)
+- [Jenkins kubernetes plugin Vs. docker plugin](docs/plugin-comparison.md)
