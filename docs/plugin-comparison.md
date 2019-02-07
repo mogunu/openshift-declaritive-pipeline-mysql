@@ -20,7 +20,7 @@
 
 ### Pros
 - The spin up time for creating the kubernetes pod and registering it as a jenkins agent happens alomost as quickly as the docker plugin.
-- When you request a pod from the kubernetes cluster using this method, it will automatically include a jenkins-slave container that is used to register the pod as a jenkins agent in your jenkins node list. This means that the other containers in your pod do not have to include the jenkins-slave/JDK stuff added to them, and that you can more easily pull down container images from the internet and use them in your jenkins job.
+- When you request a pod from the kubernetes cluster using this method, it will automatically include a jenkins-slave container that is used to register the pod as a jenkins agent in your jenkins node list. This means that the other containers in your pod do not have to include the jenkins-slave/JDK stuff, and that you can use common container images from the internet and use them in your jenkins job.
 - Containers within a pod have networking support. In other words, you can spin up multiple containers for a single jenkins job run, and those containers can communicate with each other over the local pod network.
 
 ### Example pod creation
