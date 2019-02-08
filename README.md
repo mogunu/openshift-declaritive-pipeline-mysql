@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ryspnc_openshift-declaritive-pipeline-mysql&metric=alert_status)](https://sonarcloud.io/dashboard?id=ryspnc_openshift-declaritive-pipeline-mysql)
+
 # openshift-declaritive-pipeline-mysql
 
 ## what is this?
