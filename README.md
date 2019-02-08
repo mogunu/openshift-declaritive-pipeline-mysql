@@ -1,8 +1,8 @@
+openshift-declaritive-pipeline-mysql
+====================================
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ryspnc_openshift-declaritive-pipeline-mysql&metric=alert_status)](https://sonarcloud.io/dashboard?id=ryspnc_openshift-declaritive-pipeline-mysql)
 
-# openshift-declaritive-pipeline-mysql
-
-## what is this?
 An example declaritive jenkins pipeline script that launches a kubernetes pod in OpenShift, with 3 containers:
 - "mysql-client" = mysql:5.7
 - "mysql-server" = mariadb-102-rhel7:1
@@ -18,4 +18,4 @@ An example declaritive jenkins pipeline script that launches a kubernetes pod in
 ## docs
 - [requirements](docs/requirements.md)
 - [resources](docs/resources.md)
-- [Jenkins kubernetes plugin Vs. docker plugin](docs/plugin-comparison.md)
+- [Jenkins kubernetes plugin vs. docker plugin](docs/plugin-comparison.md)
