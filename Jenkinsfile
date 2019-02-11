@@ -23,6 +23,7 @@ pipeline {
       }
     }
 
+    
     stage('mysql-client') {
       steps {
         container('mysql-client') {
